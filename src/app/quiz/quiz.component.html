@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="main">
+    <mat-card class="example-card">
+        <mat-card-subtitle>JavaScript Assessment</mat-card-subtitle>
+        <mat-card-title>Q{{curIndex+1}}. {{quiz.Question}}</mat-card-title>
+        <mat-divider inset></mat-divider>
+        <mat-card-actions>
+            <button mat-raised-button [ngClass]="{ 'active' : isValue == 1 }" class="btn-grad" (click)="selected(quiz.option1,quiz.QnId, curIndex, 1)">{{quiz.option1}}</button>
+           <!-- <div  class="btn-grad" (click)="selected(quiz.option1,quiz.QnId, curIndex)">{{quiz.option1}}</div> -->
+           <button mat-raised-button [ngClass]="{ 'active' : isValue == 2 }" class="btn-grad" (click)="selected(quiz.option2,quiz.QnId, curIndex, 2)">{{quiz.option2}}</button>
+           <button mat-raised-button [ngClass]="{ 'active' : isValue == 3 }" class="btn-grad" (click)="selected(quiz.option3, quiz.QnId, curIndex, 3)">{{quiz.option3}}</button>
+           <button mat-raised-button [ngClass]="{ 'active' : isValue == 4 }" class="btn-grad" (click)="selected(quiz.option4, quiz.QnId, curIndex, 4)">{{quiz.option4}}</button>
+        <div class="fnBtn d-flex">
+            <button mat-button (click)="next()">next</button>
+            <button mat-button (click)="back()">Back</button>
+            <ng-container *ngIf="ifSubmit()">
+                <div class="w-100 mr70 d-flex justify-content-end">
+                    <button mat-raised-button color="accent" *ngIf="!this.score" (click)="submit()"
+                    data-bs-toggle="modal" data-bs-target="#myModal">Submit</button>
+                    <button mat-raised-button color="accent" *ngIf="this.score" (click)="reset()">Reset</button>
+                </div>
+            </ng-container>
+            
+        </div>
+        
+        </mat-card-actions>
+        <mat-card-footer>
+        <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+        </mat-card-footer>
+        <ng-container *ngIf="this.score">Congratulations your score is : {{this.score}}</ng-container>
+    </mat-card> 
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+    <div class="card">
+        <div class="text-right cross"> <i class="fa fa-times"></i> </div>
+        <div class="card-body text-center"> 
+            <!-- <img src="https://img.icons8.com/bubbles/200/000000/trophy.png"> -->
+            <img src="https://cdn.pixabay.com/photo/2020/12/15/16/06/win-5834110_960_720.png" style="width: 53%;" alt="">
+            <h4>CONGRATULATIONS!</h4>
+            <p>Congratulations! your score is {{this.score}}</p> <button class="btn btn-out btn-square continue">CONTINUE</button>
+        </div>
+    </div>
+</div>
+</div>

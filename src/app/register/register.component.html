@@ -1,0 +1,67 @@
+
+<div>
+  <ul>
+      <li><a class="active" routerLink="/landing-page">QuizPro</a></li>
+      <li class="rt"><a routerLink="/register">SignUp</a></li>
+      <li class="rt"><a routerLink="/login">Login</a></li>
+      <li class="rt"><a routerLink="#">Support</a></li>
+      
+      
+    </ul>
+</div>
+<form action="" class="form-container" #registerForm="ngForm" (ngSubmit)="OnSubmit(registerForm)">
+    <mat-card class="w-50">
+      <mat-card-header>
+      </mat-card-header>
+      <mat-card-content>
+        <img class="quizImg" src="https://juristforbundet.no/globalassets/bilder/istock/illustrasjon-symbolikk/quiz_istock-1171765499.jpg?preset=articleIntroImage"
+         alt="">
+         <!-- <img class="h20" src="../../assets/output-onlinepngtools.png"
+         alt=""> -->
+        <div class="row c-row">
+          <mat-form-field>
+            <!-- <mat-icon>account_circle</mat-icon> -->
+            <!-- <mat-icon matPrefix>account_circle</mat-icon> -->
+            <mat-label class="f-size16">
+              <mat-icon class="f-size25" [class.c-purple]="Name.untouched" matPrefix>account_circle</mat-icon>
+              Enter Name
+            </mat-label>
+            <input class="h30 f-size18" matInput type="text" name="Name" #Name="ngModel" ngModel required>
+          </mat-form-field>
+        </div>
+   
+        <div class="row c-row">
+          <mat-form-field>
+            <mat-label class="f-size16">
+              <mat-icon [class.c-purple]="Email.untouched" class="f-size25" matPrefix>email</mat-icon>
+              Enter Email
+            </mat-label>
+            <input class="h30 f-size18" matInput type="email"  name="Email" #Email="ngModel" ngModel required [pattern]='emailPattern'>
+          </mat-form-field>
+        </div>
+
+        <div class="row c-row">
+          <mat-form-field>
+            <mat-label class="f-size16">
+              <mat-icon [class.c-purple]="Phone.untouched" class="f-size25" matPrefix>phone</mat-icon>
+              Enter Phone
+            </mat-label>
+            <input class="h30 f-size18" matInput type="phone"  name="Phone" #Phone="ngModel" ngModel required emailPattern>
+          </mat-form-field>
+        </div>
+
+        <div class="row c-row">
+          <mat-form-field>
+            <mat-label class="f-size16">
+              <mat-icon [class.c-purple]="Password.untouched" class="f-size25" matPrefix>password</mat-icon>
+              Enter Passowrd
+            </mat-label>
+            <input class="h30 f-size18" matInput type="password"  name="Password" #Password="ngModel" ngModel required >
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="dflex">
+        <button mat-raised-button color="primary" [disabled]="!registerForm.valid" class="btn-large">Start</button>
+      </mat-card-actions>
+    </mat-card>
+</form>

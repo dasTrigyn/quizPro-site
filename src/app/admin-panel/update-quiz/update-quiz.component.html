@@ -1,0 +1,56 @@
+<form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+  
+    <div class="container">
+
+        <div class="row align-items-start">
+            <div class="col-12 mb-3">
+              <label for="Questione" class="ml-2">Question: </label>
+               <input id="Question" type="text" class="ml-2 mt-4 w-75" formControlName="Question" pInputText>
+            </div>
+          </div>
+
+        <div class="row align-items-start">
+          <div class="col-6 mb-3">
+            <label for="QnId" class="ml-4">QnId: </label>
+            <input id="QnId" type="text" class="ml-2" formControlName="QnId" pInputText>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="Answer" class="ml-4">Answer: </label>
+              <input id="Answer" type="text" class="ml-2" formControlName="Answer" pInputText>
+          </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col-6 mb-3">
+              <label for="option1" class="ml-4">option1: </label>
+              <input id="option1" type="text" class="ml-2" formControlName="option1" pInputText>
+            </div>
+            <div class="col-6 mb-3">
+              <label for="option2" class="ml-2">option2: </label>
+               <input id="option2" type="text" class="ml-2" formControlName="option2" pInputText>
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col-6 mb-3">
+              <label for="option3" class="ml-4">option3: </label>
+              <input id="option3" type="text" class="ml-2" formControlName="option3" pInputText>
+            </div>
+            <div class="col-6 mb-3">
+              <label for="option4" class="ml-2">option4: </label>
+               <input id="option4" type="text" class="ml-2" formControlName="option4" pInputText>
+            </div>
+        </div>
+
+       
+
+        <div class="row align-items-start">
+            <div class="col-6 mb-3">
+                <button  type="button" class="p-element p-button p-component">
+                    <span class="p-button-label">Submit</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+  </form>

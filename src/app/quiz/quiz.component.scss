@@ -1,0 +1,105 @@
+.example-card {
+    /* smax-width: 800px; */
+    width: 90%;
+    height: 90%;
+}
+.main{
+    width: 100%;
+    display: flex;
+    height: 88%;
+    justify-content: center;
+    align-items: center;
+}
+mat-card-title{
+    color: floralwhite;
+}
+mat-card{
+    background: #ff6348;
+}
+.active{
+    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%) !important;
+}
+.btn-grad {background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%)}
+.btn-grad {
+    width: 50%;
+    margin: 24px !important;
+   padding: 0px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+.mr70{
+    margin-right: 70px;
+}
+
+
+/* modal css */
+.card {
+    position: relative;
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+    box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+}
+
+.card .card-body {
+    padding: 1rem 1rem
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+p {
+    font-size: 14px
+}
+
+h4 {
+    margin-top: 18px
+}
+
+.cross {
+    padding: 10px;
+    color: #d6312d;
+    cursor: pointer
+}
+
+.continue:focus {
+    outline: none
+}
+
+.continue {
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 8px 19px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #D50000
+}
+
+.continue:hover {
+    background-color: #D32F2F !important
+}
+
+/* emd modal */
