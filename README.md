@@ -28,14 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://quiz-pro-2.herokuapp.com/landing-page
 
-#github
-dasTrigyn
-Angular@501
 
-#heroku
-subham.das@trigyn.com
-Sub.,501
-
-#cloud.mongodb.com
-sdTrigyn
-50120707717
